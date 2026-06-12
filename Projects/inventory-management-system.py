@@ -1,0 +1,1 @@
+# Imagine you are running a small digital store. You need a Python script that lets you manage your stock, track prices, and save the data so it doesn't disappear when you close the program.
