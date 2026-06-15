@@ -57,12 +57,14 @@ function calculate() {
 
 function addHistory(formula, result) {
     const emptyLi = historyList.querySelector('.empty');
-    if (emptyLi) emptyLi.remove();
+    if (emptyLi) {
+        historyList.innerHTML = '';
+    }
 
     const li = document.createElement('li');
     li.innerHTML = `${formula} = <strong>${result}</strong>`;
     
-    historyList.insertBefore(li, historyList.firstChild);
+    historyList.prepend(li);
 }
 
 function clearHistory() {

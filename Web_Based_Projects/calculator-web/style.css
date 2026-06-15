@@ -55,6 +55,7 @@ body {
     gap: 30px;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: flex-start; 
 }
 
 .calculator {
@@ -171,19 +172,9 @@ button.equal:hover {
     border: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
-    height: 440px; 
+    height: 466px; 
     box-sizing: border-box;
     transition: background-color 0.3s, border 0.3s;
-    overflow: hidden;
-}
-
-#history-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    height: calc(100% - 80px);
-    overflow-y: auto;
-    margin-bottom: 15px;
 }
 
 .history-card h3 {
@@ -192,6 +183,16 @@ button.equal:hover {
     padding-bottom: 10px;
     font-size: 18px;
     margin-bottom: 10px;
+    flex-shrink: 0;
+}
+
+#history-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1; 
+    overflow-y: auto; 
+    margin-bottom: 15px;
 }
 
 #history-list li {
@@ -217,12 +218,13 @@ button.equal:hover {
     font-size: 14px;
     background-color: #ff3b30;
     border-radius: 8px;
-    margin-top: auto; 
     color: white;
     font-weight: bold;
     cursor: pointer;
     border: none;
     transition: background-color 0.2s;
+    flex-shrink: 0;
+    width: 100%;
 }
 
 .clear-history-btn:hover {
